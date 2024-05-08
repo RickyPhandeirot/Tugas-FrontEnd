@@ -1,7 +1,31 @@
 @extends('layouts.main')
 @section('container')
-    <h2>{{ $device["name"] }} ({{ $device["id"] }})</h2>
-    <h2>Value: {{ $device["current_value"] }}</h2>
+    <h1>{{ $device["device_name"]}}</h1>
+    @php
+        $i = 1;
+    @endphp
 
-    <a href="/devices">back to Devices</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">DateTime</th>
+                <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody>
+                @foreach($data as $d)
+                <tr>
+                    <td>{{ $i }}</td>
+                    <td>{{ $d["created_at"] }}</td>
+                    <td>{{ $d["data"] }}</td>
+                </tr>
+                @php
+                    $i++;
+                @endphp
+                @endforeach
+
+        </tbody>
+    </table>
+<a href="/devices">Back to Devices</a>
 @endsection
