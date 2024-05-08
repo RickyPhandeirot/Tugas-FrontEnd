@@ -5,6 +5,28 @@
         $i = 1;
     @endphp
 
+    <style>
+        .table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .table th,
+        .table td {
+            border: 1px solid #30a33967;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table th {
+            background-color: #ffe600;
+        }
+        body {
+        background-color: rgba(47, 206, 255, 0.76); /* Warna kuning kehijauan dengan transparansi setengah dalam format RGBA */
+    }
+    </style>
+
+
     <table class="table">
         <thead>
             <tr>
