@@ -20,7 +20,7 @@ class DataController extends Controller
         $data->data = $request->data;
         $data->save();
 
-        if (Device::where('id', $request->device_id)->exist()){
+        if (Device::where('id', $request->device_id)->exists()){
             $device = Device::find($request->device_id);
             $device->current_value = $request->data;
             $device->save();
