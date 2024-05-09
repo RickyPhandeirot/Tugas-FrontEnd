@@ -22,7 +22,7 @@
             background-color: #ffe600;
         }
         body {
-        background-color: rgba(47, 206, 255, 0.76); /* Warna kuning kehijauan dengan transparansi setengah dalam format RGBA */
+        background-color: rgba(47, 206, 255, 0.76);
     }
     </style>
 
